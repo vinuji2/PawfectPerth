@@ -9,12 +9,27 @@
     "userInterfaceStyle": "light",
     "plugins": [
       "expo-router",
-      ["expo-image-picker", {
-        "photosPermission": "Allow Pawfect Perth to choose your dog's profile photo.",
-        "cameraPermission": "Allow Pawfect Perth to take your dog's profile photo."
-      }]
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Pawfect Perth to choose your dog's profile photo.",
+          "cameraPermission": "Allow Pawfect Perth to take your dog's profile photo."
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 36,
+            "targetSdkVersion": 36,
+            "buildToolsVersion": "36.0.0"
+          }
+        }
+      ]
     ],
-    "ios": { "supportsTablet": false },
+    "ios": {
+      "supportsTablet": false
+    },
     "android": {
       "package": "com.pawfectperth.app",
       "adaptiveIcon": {
@@ -22,9 +37,16 @@
         "foregroundImage": "./assets/pawfect-icon.png"
       },
       "predictiveBackGestureEnabled": false,
-      "permissions": ["CAMERA", "READ_MEDIA_IMAGES"]
+      "permissions": [
+        "CAMERA",
+        "READ_MEDIA_IMAGES"
+      ]
     },
-    "web": { "favicon": "./assets/favicon.png" },
-    "experiments": { "typedRoutes": true }
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "experiments": {
+      "typedRoutes": true
+    }
   }
 }
