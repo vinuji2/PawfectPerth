@@ -1,0 +1,13 @@
+{
+  "license": "Unsplash License — https://unsplash.com/license",
+  "photos": [
+    { "file": "labrador-milo.jpg", "photographer": "Cristian Castillo", "source": "https://unsplash.com/photos/73pyV0JJOmE" },
+    { "file": "labrador-daisy.jpg", "photographer": "Dom Heartley", "source": "https://unsplash.com/photos/rK0loIbMLbs" },
+    { "file": "golden-finn.jpg", "photographer": "Jesse Collins", "source": "https://unsplash.com/photos/XCHhSPhXsiI" },
+    { "file": "golden-lola.jpg", "photographer": "Bharathi Kannan", "source": "https://unsplash.com/photos/PfF3_rH3AaI" },
+    { "file": "husky-koda.jpg", "photographer": "Nataliia Kvitovska", "source": "https://unsplash.com/photos/iy5Kqqvytuo" },
+    { "file": "husky-nova.jpg", "photographer": "Reba Spike", "source": "https://unsplash.com/photos/ISahwf9hCNg" },
+    { "file": "aussie-blue.jpg", "photographer": "Melissa Keizer", "source": "https://unsplash.com/photos/ZB4zmR1vvMk" },
+    { "file": "aussie-poppy.jpg", "photographer": "Melissa Keizer", "source": "https://unsplash.com/photos/cndAgyVouoM" }
+  ]
+}

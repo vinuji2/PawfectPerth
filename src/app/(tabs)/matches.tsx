@@ -1,0 +1,9 @@
+import { Image, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { useApp } from '../../context/AppContext';
+import { resolveDogPhoto } from '../../data/dogs';
+import { colors, shadow } from '../../theme';
+export default function MatchesScreen() {
+  const { matchedDogs } = useApp();
+  return <SafeAreaView style={styles.safe}><Text style={styles.title}>Matches</Text>{matchedDogs.length === 0 ? <View style={styles.empty}><Text style={styles.heart}>♡</Text><Text style={styles.emptyTitle}>No matches yet</Text></View> : <ScrollView contentContainerStyle={styles.grid} showsVerticalScrollIndicator={false}>{matchedDogs.map((dog) => <View key={dog.id} style={styles.card}><Image source={resolveDogPhoto(dog)} style={styles.photo} /><View style={styles.info}><Text style={styles.name}>{dog.name}</Text><Text style={styles.meta}>{dog.breed}</Text><Text style={styles.suburb}>{dog.suburb}</Text></View></View>)}</ScrollView>}</SafeAreaView>;
+}
+const styles = StyleSheet.create({ safe: { flex: 1, backgroundColor: colors.cream, paddingHorizontal: 18 }, title: { color: colors.cocoa, fontSize: 30, fontWeight: '900', marginTop: 20, marginBottom: 18 }, grid: { flexDirection: 'row', flexWrap: 'wrap', gap: 14, paddingBottom: 24 }, card: { width: '47.5%', backgroundColor: colors.paper, borderRadius: 22, overflow: 'hidden', ...shadow }, photo: { width: '100%', aspectRatio: 0.92, resizeMode: 'cover' }, info: { padding: 14 }, name: { color: colors.cocoa, fontSize: 20, fontWeight: '800' }, meta: { color: colors.cocoaSoft, fontSize: 13, marginTop: 2 }, suburb: { color: colors.rose, fontSize: 12, fontWeight: '700', marginTop: 7 }, empty: { flex: 1, justifyContent: 'center', alignItems: 'center', paddingBottom: 80 }, heart: { color: colors.blush, fontSize: 70 }, emptyTitle: { color: colors.cocoa, fontSize: 22, fontWeight: '800', marginTop: 10 } });
